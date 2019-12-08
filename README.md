@@ -6,7 +6,7 @@
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|username|string|null: false|
+|name|string|null: false|
 ### Association
 - has_many :chats
 - has_many :users_groups
@@ -15,8 +15,8 @@
 ## chatテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false| |
-|image|text|null: false| |
+|body|text|| 
+|image|text|| 
 |user|references|null: false, foreign_key: true|
 |group|references|null: false, foreign_key: true|
 ### Association
