@@ -1,0 +1,18 @@
+.chat-side
+ .side_bar
+  .side_bar__box
+   %p.side_bar__box__user-name vv
+   %ul.side_bar__box__menu
+    %li.side_bar__box__edit-user 
+     = icon('fas','edit') 
+    %li.side_bar__box__new-groups
+     = icon('fas', 'cog')
+   
+ .groups
+  = link_to "#", class:"group" do
+   %p.group__group-name
+    test 
+   %p.group__latest-message
+    まだメッセージがありません
+
+
