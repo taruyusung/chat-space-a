@@ -3,16 +3,24 @@
   .side_bar__box
    %p.side_bar__box__user-name vv
    %ul.side_bar__box__menu
-    %li.side_bar__box__edit-user 
-     = icon('fas','edit') 
-    %li.side_bar__box__new-groups
-     = icon('fas', 'cog')
+    = link_to "#", class: "side_bar__box__edit-user " do
+     = icon('fas', 'edit', class: "edit-user--icon")
+    = link_to "#", class: "side_bar__box__new-groups" do
+     = icon('fas', 'cog', class: "new-groups--icon")
    
  .groups
   = link_to "#", class:"group" do
    %p.group__group-name
     test 
    %p.group__latest-message
+    %span<>
     まだメッセージがありません
 
 
+/= link_to "#", class: "main-header__edit-btn" do
+/ = icon('fab', class: "edit-btn--icon",)
+/ %span<>
+/Edit
+
+/%li.side_bar__box__edit-user 
+/= icon('fas','edit') 
