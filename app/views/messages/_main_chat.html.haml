@@ -1,0 +1,26 @@
+.chat-main
+ .main-header
+  .main-header__left-box
+   %h2.main-header__left-box__current-group
+    f
+   %ul.main-header__left-box__member-list 
+    member
+    %li.main-header__left-box__member-list__member
+     たが
+  = link_to "#", class: "main-header__edit-btn" do
+   = icon('fab', class: "edit-btn--icon",)
+   %span<>
+   Edit
+     
+ .messages
+ .form
+  %form.new_messages
+   .input-box
+    %input.input-box__text{type: "text", placeholder: "type a message"}
+    %label.input-box__image
+     = icon('fas', 'image') do
+      %input.input-box__image__file{type: "file"}
+   %input{type: "submit", class: "submit-btn"}
+
+ 
+
