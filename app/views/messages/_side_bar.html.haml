@@ -1,11 +1,12 @@
 .chat-side
  .side_bar
   .side_bar__box
-   %p.side_bar__box__user-name vv
+   %p.side_bar__box__user-name 
+    = current_user.name
    %ul.side_bar__box__menu
-    = link_to "#", class: "side_bar__box__edit-user " do
+    = link_to '#', class: "side_bar__box__edit-user " do
      = icon('fas', 'edit', class: "edit-user--icon")
-    = link_to "#", class: "side_bar__box__new-groups" do
+    = link_to edit_user_path(current_user), class: "side_bar__box__new-groups" do
      = icon('fas', 'cog', class: "new-groups--icon")
    
  .groups
