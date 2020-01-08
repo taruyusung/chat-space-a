@@ -2,11 +2,11 @@
   .main-header
     .main-header__left-box
       %h2.main-header__left-box__current-group
-        f
+        = group.name  
       %ul.main-header__left-box__member-list
         member
         %li.main-header__left-box__member-list__member
-          たが
+           = current_user.name
     = link_to edit_group_path(@group), class: "main-header__edit-btn" do
       = icon('fab', class: "edit-btn--icon",)
       %span<>
