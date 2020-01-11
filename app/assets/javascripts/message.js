@@ -1,27 +1,28 @@
 $(function(){
-  function buildHTML(message) {
-
-    image = (message.image) ? `<img class= "lower-message__image" src=${message.image} >` : "";
-    var html = `<div class="message" data-message-id="${message.id}"> 
-          <div class="upper-message">
-            <div class="upper-message__user-name">
-              ${message.user_name}
-            </div>
-            <div class="upper-message__date">
-              ${message.date}
-            </div>
+  var buildHTML = function(message) {
+    var content = message.content ? `${ message.content }` : "";
+    var img  = message.image ? `< class="lower-message__image" src=${ message.image }>` : "";
+      var html = `<div class="message" data-message-id=${message.id} >
+        <div class="upper-message">
+          <div class="upper-message__user-name">
+            ${message.user_name}
           </div>
-          <div class="lower-meesage">
-            <p class="lower-message__content">
-              ${message.content}
-            </p>
-            ${image}
+          <div class="upper-message__date">
+            ${message.created_at}
           </div>
-        </div>`
+        </div>
+        <div class="lower-message">
+          <p class="lower-message__content">
+            ${content}
+          </p>
+          ${img}
+        </div>
+      </div>`
     return html;
-  }
+  };
 
- 
+  
+  
 
   var reloadMessages = function() {
     last_message_id = $('.message:last').data("message-id");
