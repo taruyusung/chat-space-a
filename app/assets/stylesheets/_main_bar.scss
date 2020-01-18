@@ -45,6 +45,18 @@
     background-color: #fafafa;
     overflow: scroll;
 
+    .upper-message{
+      display: flex;
+
+      &__user-name{
+        margin-right: 10px;
+      }
+      &__date{
+        color: #999999;
+        font-size: 12px;
+      }
+    }
+
   }
   .form{
     height: 90px;
